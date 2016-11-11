@@ -7,6 +7,7 @@ create table Language
         constraint Language_ak
             unique
 )
+    organization index
 /
 
 create table Country
@@ -18,7 +19,6 @@ create table Country
         constraint Country_ak
             unique
 )
-organization index
 /
 
 create table Country_Synonym
@@ -41,11 +41,6 @@ alter table Country_Synonym
             using index Country_Synonym_Code_Name_ui
 /
 
-create sequence City_seq
-    start with 5001
-    order nocache
-/
-
 create table Region
 (
     Ctr_Code char(2) not null
@@ -64,6 +59,11 @@ create table Region
 /
 
 
+create sequence City_seq
+    start with 5001
+    order nocache
+/
+
 create table City
 (
     Ctr_Code char(2) not null
@@ -81,4 +81,45 @@ create table City
             references Region (Ctr_Code, Reg_Code)
 )
 /
+
+
+create table Toponym
+(
+    Ctr_Code char(2) not null,
+    Reg_Code varchar(6),
+    Cty_Id number(6),
+    Topo_Name varchar(80) not null,
+    Topo_Rowid rowid not null
+)
+/
+
+create index Toponym_Name_i
+    on Toponym (Topo_Name)
+/
+
+create materialized view Toponym
+    on prebuilt table
+as
+select Ctr_Code,
+       cast(null as varchar(6)) as Reg_Code,
+       cast(null as number(6)) as Cty_Id,
+       Ctr_Name as Topo_Name,
+       Country.rowid as Topo_Rowid
+from Country
+union
+select Ctr_Code,
+       Reg_Code,
+       cast(null as number(6)) as Cty_Id,
+       Reg_Name as Topo_Name,
+       Region.rowid  as Topo_Rowid
+from Region
+union
+select Ctr_Code,
+       Reg_Code,
+       Cty_Id,
+       Cty_Name as Topo_Name,
+       City.rowid as Topo_Rowid
+from City
+/
+
 
