@@ -13,6 +13,7 @@ grant create cluster,
       create trigger,
       create procedure,
       create operator,
+      create indextype,
       create dimension,
       create library,
       create synonym
