@@ -71,3 +71,28 @@ create table KERN_ROCK
 )
     cluster DUMP(COORD_X,COORD_Y)
 /
+
+
+------ HASH CLUSTER WITH SORT ------
+
+create cluster CALL_DETAILS
+(
+    TELEPHONE_NUMBER number(20),
+    CALL_TIMESTAMP   date sort,
+    CALL_DURATION    number(8) sort
+)
+hashkeys 7001 hash is TELEPHONE_NUMBER size 64
+/
+
+create table CALL_DETAIL
+(
+    ENTRY_ID         number(18),
+    SOURCE_CODE      char(1),
+    TELEPHONE_NUMBER number(20),
+    CALL_TIMESTAMP   date /* sort */,
+    CALL_DURATION    number(8) /* sort */,
+    NOTE1            varchar(80),
+    NOTE2            varchar(80)
+)
+cluster CALL_DETAILS (TELEPHONE_NUMBER, CALL_TIMESTAMP, CALL_DURATION)
+/
