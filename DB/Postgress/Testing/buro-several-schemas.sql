@@ -46,6 +46,12 @@ create schema Buro
     )
     inherits (Face)
 
+    create table Entrepreneur
+    (
+        Entrep_Note text
+    )
+    inherits (Org, Person)
+
     create table Address
     (
         Face_Id            int      not null,
