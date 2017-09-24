@@ -1,10 +1,9 @@
 create table mat_owners
 (
-    name varchar(128) -- primary key
+    name varchar(30) primary key
 )
-    -- organization index
+    organization index
 /
-
 
 create materialized view mat_owners
     on prebuilt table
@@ -13,6 +12,10 @@ as
 select distinct owner as name
     from sys.all_mviews
 /
+
+alter materialized view mat_owners refresh complete
+/
+
 
 alter materialized view mat_owners refresh complete
 /

@@ -7,6 +7,7 @@ create user tester from login Tester
 go
 
 exec sp_addrolemember 'db_ddladmin', 'tester'
+exec sp_addrolemember 'db_datareader', 'tester'
 exec sp_addrolemember 'db_datawriter', 'tester'
 
 create schema tests authorization tester
