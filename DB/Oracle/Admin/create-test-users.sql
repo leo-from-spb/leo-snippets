@@ -15,7 +15,7 @@ create user Test_Admin identified by test
 /
 
 grant connect, development
-    to Test_User with admin option
+    to Test_Admin with admin option
 /
 
 grant select any dictionary
