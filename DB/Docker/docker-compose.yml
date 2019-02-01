@@ -58,6 +58,13 @@ services:
       image: postgres:9.6-alpine
       env_file: postgres.env
 
+    pg11:
+      container_name: pg11
+      ports:
+        - "1110:5432"
+      image: postgres:11-alpine
+      env_file: postgres.env
+
     mysql51:
       container_name: mysql51
       ports:
