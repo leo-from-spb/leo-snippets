@@ -8,6 +8,6 @@ grant connect, development
     to #USER with admin option
 /
 
-grant select any dictionary
+grant select any dictionary, debug connect session
     to #USER
 /
