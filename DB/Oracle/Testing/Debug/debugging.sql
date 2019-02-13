@@ -1,14 +1,11 @@
-select userenv('sessionId')
-from dual
-/
-
 begin
     dbms_output.enable(2000);
+    dbms_output.put_line('Session Id: ' || userenv('sessionId'));
 end;
 /
 
 declare
-    tsid varchar(15) := '035E00FC0001';
+    tsid varchar(15) := '007E603E0001';
     ri dbms_debug.runtime_info;
     rz binary_integer;
 begin
