@@ -56,8 +56,24 @@ begin
 end;
 /
 
+declare
+    X binary_integer := 10;
+    Y binary_integer := 25;
+begin
+    X := X + Y;
+    Y := X - Y;
+    X := X - Y;
+    dbms_output.put_line('X = ' || X);
+    dbms_output.put_line('Y = ' || Y);
+end;
+/
+
+
 begin
     dbms_debug.debug_off;
 end;
+/
+
+alter session set plsql_debug = false
 /
 
