@@ -1,5 +1,5 @@
 begin
-    dbms_output.enable(2000);
+    --dbms_output.enable(2000);
     dbms_output.put_line('Session Id: ' || userenv('sessionId'));
 end;
 /
@@ -36,12 +36,28 @@ end;
 /
 
 begin
-    dbms_output.put_line('Procedure started.');
+    --dbms_output.put_line('Procedure started.');
     dbms_debug.debug_on(immediate => true);
     --
     Pro1();
     --
     dbms_debug.debug_off;
-    dbms_output.put_line('Procedure completed.');
+    --dbms_output.put_line('Procedure completed.');
 end;
 /
+
+begin
+    dbms_debug.debug_on(immediate => false);
+end;
+/
+
+begin
+    Pro1;
+end;
+/
+
+begin
+    dbms_debug.debug_off;
+end;
+/
+
