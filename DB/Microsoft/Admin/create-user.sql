@@ -15,3 +15,6 @@ go
 
 alter user tester with default_schema = tests
 go
+
+grant showplan to tester
+go

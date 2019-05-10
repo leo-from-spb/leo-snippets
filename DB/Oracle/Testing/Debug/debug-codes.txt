@@ -1,0 +1,65 @@
+PAUSE REASONS
+---------------------------------------------------
+ 0   none
+ 1   reserved_1
+ 2   interpreter_starting
+ 3   breakpoint             at a breakpoint
+ 4   sql                    executing SQL
+ 5   reserved_5
+ 6   enter                  procedure entry
+ 7   return                 procedure return
+ 8   finish                 procedure is finished
+ 9   line                   reached a new line
+10   interrupt              an interrupt occurred
+11   exception              an exception was raised
+12   ICD_call
+13   ICD_return
+14   watch                  watched value changed
+15   exit                   interpreter is exiting
+16   handler                start exception-handler
+17   timeout                a timeout occurred
+18   rpc                    an RPC started
+19   unhandled              unhandled exception
+20   instantiate            instantiation block
+21   abort                  interpreter is aborting
+25   knl_exit               interpreter is exiting
+26   oer_breakpoint
+
+
+
+DEBUG API ERRORS
+--------------------------------------------------------------------
+ 1   bogus_frame          no such frame
+ 2   no_debug_info        debug info missing
+ 3   no_such_object       no such var/param
+ 4   unknown_type         debug info garbled
+ 5   illegal_value        constraint violation
+ 6   illegal_null         constraint violation
+ 7   value_malformed      bad value
+ 8   other                unknown error
+ 9   pbrun_mismatch
+10   no_rph
+11   name_incomplete      not a scalar lvalue
+12   illegal_line         no such line
+13   no_such_breakpt      no such breakpoint
+14   idle_breakpt         unused breakpoint
+15   stale_breakpt        pu changed under bpt
+16   bad_handle           can't set bpt there
+17   unimplemented        NYI functionality
+18   indexed_table        can't get/set an entire collection at once
+19   illegal_index        illegal collection index (V8)
+20   probe_invalid
+21   upierr
+22   noasync
+23   nologon
+24   reinit
+25   unrecognized
+26   synch
+27   deferred             request was deferred (currently unused)
+28   exception            exception inside Probe
+29   communication        generic pipe error
+30   incompatible
+31   timeout              timeout
+32   nullvalue            value is null
+40   nullcollection       collection is atomically null (V8)
+

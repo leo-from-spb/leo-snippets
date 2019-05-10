@@ -4,6 +4,9 @@ begin
 end;
 /
 
+select userenv('sessionId') as Session_Id
+from dual
+/
 
 create or replace procedure Pro1 as
 begin
@@ -31,7 +34,7 @@ declare
     dsid varchar(60);
 begin
     dsid := dbms_debug.initialize;
-    dbms_output.put_line('Target session id: ' || dsid);
+    dbms_output.put_line('Target session id: ''' || dsid || '''');
 end;
 /
 
@@ -76,4 +79,24 @@ end;
 
 alter session set plsql_debug = false
 /
+
+
+
+create or replace function X4000 return string
+as
+    X varchar(4000);
+begin
+    X := rpad('X', 4000, 'X');
+    return X;
+end;
+/
+
+create or replace function X20000 return string
+as
+begin
+    return X4000 || X4000 || X4000 || X4000 || X4000;
+end;
+/
+
+
 
