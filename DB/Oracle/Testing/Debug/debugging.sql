@@ -8,7 +8,7 @@ end;
 declare
     z binary_integer;
 begin
-    dbms_debug.attach_session(?);
+    dbms_debug.attach_session('RABBIT');
     z := dbms_debug.set_timeout(10);
 end;
 /
@@ -34,7 +34,7 @@ begin
 end;
 /
 
-declare -- CONTINUE
+declare -- STEP
     ri dbms_debug.runtime_info;
     pi dbms_debug.program_info;
     rz binary_integer;

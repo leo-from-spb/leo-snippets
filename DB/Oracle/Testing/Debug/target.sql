@@ -33,7 +33,7 @@ end;
 declare
     dsid varchar(60);
 begin
-    dsid := dbms_debug.initialize;
+    dsid := dbms_debug.initialize('RABBIT');
     dbms_output.put_line('Target session id: ''' || dsid || '''');
 end;
 /
