@@ -22,6 +22,6 @@ grant connect, development
     to Test_Admin with admin option
 /
 
-grant debug connect session, select any dictionary
+grant select any dictionary, debug connect session, debug any procedure
     to Test_Admin
 /
