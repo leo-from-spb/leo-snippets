@@ -57,6 +57,10 @@ begin
 end;
 /
 
+update Table_with_Triggers
+    set Name = Name || '+'
+/
+
 rollback
 /
 
