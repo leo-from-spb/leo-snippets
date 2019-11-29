@@ -39,10 +39,10 @@ alter package Fibonacci compile debug body
 /
 
 declare
-    x number;
+    v number := -1;
 begin
     dbms_output.enable(1000);
-    x := Fibonacci.f(7);
-    dbms_output.put_line(x);
+    v := Fibonacci.f(40);
+    dbms_output.put_line(v);
 end;
 /

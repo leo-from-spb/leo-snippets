@@ -38,8 +38,8 @@ begin
 end;
 /
 
-select *
-from sys.user_source
+select S.*, length(text) as text_length
+from sys.user_source S
 where name = 'ROLL'
   and type = 'PACKAGE BODY'
 /
