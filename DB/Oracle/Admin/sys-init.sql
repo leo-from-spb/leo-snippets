@@ -16,7 +16,9 @@ grant create cluster,
       create indextype,
       create dimension,
       create library,
-      create synonym
+      create synonym,
+      create database link,
+      alter database link
 to Development
 /
 
