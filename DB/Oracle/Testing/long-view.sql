@@ -121,3 +121,67 @@ select '123456789 123456789 123456789 123456789 123456789 123456789 123456789 12
        '123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789 123456789.' as N120
 from dual
 /
+
+
+create view Lorem_Ipsum as
+select
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry.                         ' as Line_01,
+    'Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s,                     ' as Line_02,
+    'when an unknown printer took a galley of type and scrambled it to make a type                      ' as Line_03,
+    'specimen book. It has survived not only five centuries, but also the leap                          ' as Line_04,
+    'into electronic typesetting, remaining essentially unchanged. It was popularised                   ' as Line_05,
+    'in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,                  ' as Line_06,
+    'and more recently with desktop publishing software like Aldus PageMaker including                  ' as Line_07,
+    'versions of Lorem Ipsum.                                                                           ' as Line_08,
+    'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots                    ' as Line_09,
+    'in a piece of classical Latin literature from 45 BC, making it over 2000 years old.                ' as Line_10,
+    'Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,                       ' as Line_11,
+    'looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,            ' as Line_12,
+    'and going through the cites of the word in classical literature, discovered                        ' as Line_13,
+    'the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33                        ' as Line_14,
+    'of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,                      ' as Line_15,
+    'written in 45 BC. This book is a treatise on the theory of ethics, very popular                    ' as Line_16,
+    'during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..",             ' as Line_17,
+    'comes from a line in section 1.10.32.                                                              ' as Line_18,
+    'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those               ' as Line_19,
+    'interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"                      ' as Line_20,
+    'by Cicero are also reproduced in their exact original form, accompanied                            ' as Line_21,
+    'by English versions from the 1914 translation by H. Rackham.                                       ' as Line_22,
+    'It is a long established fact that a reader will be distracted by the readable content             ' as Line_23,
+    'of a page when looking at its layout. The point of using Lorem Ipsum is that it has                ' as Line_24,
+    'a more-or-less normal distribution of letters, as opposed to using ''Content here, content here'', ' as Line_25,
+    'making it look like readable English. Many desktop publishing packages and web page editors        ' as Line_26,
+    'now use Lorem Ipsum as their default model text, and a search for ''lorem ipsum''                  ' as Line_27,
+    'will uncover many web sites still in their infancy. Various versions have evolved                  ' as Line_28,
+    'over the years, sometimes by accident, sometimes on purpose (injected humour and the like).        ' as Line_29,
+    'There are many variations of passages of Lorem Ipsum available,                                    ' as Line_30,
+    'but the majority have suffered alteration in some form, by injected humour,                        ' as Line_31,
+    'or randomised words which don''t look even slightly believable. If you are going                   ' as Line_32,
+    'to use a passage of Lorem Ipsum, you need to be sure there isn''t anything                         ' as Line_33,
+    'embarrassing hidden in the middle of text. All the Lorem Ipsum generators                          ' as Line_34,
+    'on the Internet tend to repeat predefined chunks as necessary, making this                         ' as Line_35,
+    'the first true generator on the Internet. It uses a dictionary of over 200 Latin words,            ' as Line_36,
+    'combined with a handful of model sentence structures, to generate Lorem Ipsum                      ' as Line_37,
+    'which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,        ' as Line_38,
+    'injected humour, or non-characteristic words etc.                                                  ' as Line_39,
+    'The standard Lorem Ipsum passage, used since the 1500s:                                            ' as Line_40,
+    '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt         ' as Line_41,
+    'ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco       ' as Line_42,
+    'laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit            ' as Line_43,
+    'in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat            ' as Line_44,
+    'cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."            ' as Line_45,
+    'Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC:                    ' as Line_46,
+    '"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque             ' as Line_47,
+    'laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi                ' as Line_48,
+    'architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas             ' as Line_49,
+    'sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione             ' as Line_50,
+    'voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,        ' as Line_51,
+    'consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore             ' as Line_52,
+    'et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum                ' as Line_53,
+    'exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?      ' as Line_54,
+    'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae          ' as Line_55,
+    'consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"                        ' as Line_56
+from dual
+/
+
+
