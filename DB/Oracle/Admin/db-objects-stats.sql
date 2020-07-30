@@ -20,3 +20,17 @@ select type, round(avg(cnt), 0) as cnt_avg, max(cnt) as cnt_max, sum(cnt) as cnt
 from O
 group by type
 /
+
+
+
+with S as ( select owner, name, type, count(*) as lines, sum(length(text)) as amount
+			from all_source
+			group by owner, name, type )
+select type, count(*) as cnt,
+       round(avg(lines),0) as lines_avg, max(lines) as lines_max, sum(lines) as lines_sum,
+       round(avg(amount),0) as amount_avg, max(amount) as amount_max, sum(amount) as amount_sum
+from S
+group by type
+order by cnt desc
+/
+
