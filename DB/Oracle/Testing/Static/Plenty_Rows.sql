@@ -1,33 +1,31 @@
-create materialized view plenty_R10 (Digit)
-    never refresh
+create materialized view Plenty_Digit
+    build immediate
+    refresh complete on demand 
 as
-select cast(d as number(1))
-from (select 0 as d from dual union all
-      select 1 as d from dual union all
-      select 2 as d from dual union all
-      select 3 as d from dual union all
-      select 4 as d from dual union all
-      select 5 as d from dual union all
-      select 6 as d from dual union all
-      select 7 as d from dual union all
-      select 8 as d from dual union all
-      select 9 as d from dual)
+select cast(level - 1 as number(1)) as Digit
+from dual
+connect by level <= 10
 /
 
-
-create materialized view plenty_R1000 (Value)
-    never refresh
+create view Plenty_99
 as
-select cast(D1.Digit * 100 + D2.Digit * 10 + D3.Digit as number(3))
-from plenty_R10 D1,
-     plenty_R10 D2,
-     plenty_R10 D3
+select D1.Digit as Digit_1,
+       D2.Digit as Digit_2,
+       cast(D1.Digit * 10 + D2.Digit as number(2)) as Value
+from Plenty_Digit D1 cross join Plenty_Digit D2
 /
 
-
-create materialized view plenty_R1000000 (Value)
-    never refresh
+create view Plenty_999
 as
-select cast(V1.Value * 1000 + V2.Value as number(6))
-from plenty_R1000 V1 cross join plenty_R1000 V2
+select D1.Digit as Digit_1,
+       D2.Digit as Digit_2,
+       D3.Digit as Digit_3,
+       cast(D1.Digit*100 + D2.Digit*10 + D3.Digit as number(3)) as Value
+from Plenty_Digit D1 cross join Plenty_Digit D2 cross join Plenty_Digit D3
+/
+
+create view Plenty_999999
+as
+select cast(T1.Value*1000 + T2.Value as number(6)) as Value
+from Plenty_999 T1 cross join Plenty_999 T2
 /
