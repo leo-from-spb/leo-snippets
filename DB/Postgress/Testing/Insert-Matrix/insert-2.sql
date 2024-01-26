@@ -1,0 +1,22 @@
+insert
+into Person (id, last_name, first_name, middle_initial, sex, birth_year, status)
+values (1, 'Escobar', 'Imani', 'P.', 'M', 2013, 0),
+       (2, 'Dickerson', 'Zachariah', 'F.', 'M', 2001, 0),
+       (3, 'Bailey', 'Opal', 'L.', 'Not specified', 2003, 0),
+       (4, 'Fields', 'Axel', 'Y.', 'F', 2011, 0),
+       (5, 'Woods', 'Annie', 'F.', 'F', 2009, 0),
+       (61, 'Jenkins', 'Zion', 'A.', 'F', 2006, 0),
+       (7, 'Weatherington', 'Ian', 'J.', 'M', 1995, 0),
+       (8, 'Nixon', 'Oakley', 'John', 'M', 1994, 0),
+       (9, 'Wolfeschlegelsteinhausenbergerdorff', 'Hubert', 'N.', 'M', 2008, 0),
+       (10, 'Macdonald', 'Emmalyn', 'U.', 'F', 2000, 0),
+       (11, 'Moyer', 'Gabriella', 'Middle Initial is unknown, will be typed later', 'M', 1997, 0),
+       (12, 'Tannenbaumgartner', 'Riley', 'Nico', 'M', 1999, 0),
+       (13, 'Hill', 'Hana', 'B.', 'M', 2006, 0),
+       (14, 'Hobbs', 'Isaac', 'R.', 'F', 2004, 0),
+       (15, 'Grant', 'Lacey', 'S.', 'F', 2000, 0),
+       (16, 'Reese', 'Leon', 'Z.', 'F', 2001, 0),
+       (17, 'Hedgeh', 'Rosemary', 'O.', 'F', 2014, 0),
+       (18, 'Bourillion', 'Korn', 'F.', 'M', 1998, 0),
+       (19, 'McFarland', 'Ximena', 'D.', 'M', 1995, 0),
+       (20, 'Dunlap', 'Dilan', 'I.', 'F', 2011, 0);
