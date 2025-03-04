@@ -1,4 +1,5 @@
 -- in the master database
 
-create login Tester with password = 'Test1234'
+create login Tester with password = 'test', check_policy = OFF
 go
+

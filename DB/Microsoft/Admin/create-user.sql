@@ -9,6 +9,7 @@ go
 exec sp_addrolemember 'db_ddladmin', 'tester'
 exec sp_addrolemember 'db_datareader', 'tester'
 exec sp_addrolemember 'db_datawriter', 'tester'
+go
 
 create schema tests authorization tester
 go
