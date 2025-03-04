@@ -3,6 +3,15 @@
 create table A13 (C1 char)
 /
 
+alter table A13
+    add C2 char(2)
+/
+
+alter table A13
+    add constraint A13_C1_or_C2_ch
+        check (C1 is not null or C2 is not null)
+/
+
 alter table A13 rename to A26
 /
 
@@ -11,7 +20,7 @@ alter table A26
 /
 
 create index A26_i
-    on A26(C2)
+    on A26(C3)
 /
 
 create trigger A26_tr
