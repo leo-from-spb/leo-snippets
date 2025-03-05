@@ -37,5 +37,11 @@ go
 alter user Tester with default_schema = tests
 go
 
+grant select, insert, update, delete on schema ::tests to Tester
+grant select, insert, update, delete on database ::Testing to Tester
+grant create table on database ::Testing to Tester
+grant alter on schema ::tests to Tester
+grant alter on database ::Testing to Tester
+grant control on database ::Testing to Tester
 grant showplan to Tester
 go
